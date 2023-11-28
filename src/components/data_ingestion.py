@@ -1,7 +1,7 @@
 import os
 import sys
-from exception import CustomException
-from logger import logging
+from src.exception import CustomException
+from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
@@ -51,6 +51,6 @@ class DataIngestion:
         
 
 if __name__=='__main__':
-    print(sys.path)
+    print('Data Ingestion part!')
     obj = DataIngestion()
-    train_data,test_data = obj.initiate_data_ingestion()
+    train_data,test_data = obj.initiateDataIngestion()
