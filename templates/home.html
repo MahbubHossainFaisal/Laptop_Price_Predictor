@@ -1,0 +1,225 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Laptop Price Predictor</h1>
+   
+       <form action="{{ url_for('predictdatapoint')}}" method="post">
+        <h1>
+            <legend>Laptop Price Prediction Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Company</label>
+            <select class="form-control" name="Company" placeholder="Enter Company" required>
+                <option class="placeholder" selected disabled value="">Select your Company</option>
+                <option value="Apple">
+                    Apple
+                </option>
+                <option value="HP">
+                    HP
+                </option>
+                <option value="Acer">
+                    Acer
+                </option>
+                <option value="Asus">
+                    Asus
+                </option>
+                <option value="Dell">
+                    Dell
+                </option>
+                <option value="Lenovo">
+                    Lenovo
+                </option>
+                <option value="Chuwi">
+                    Chuwi
+                </option>
+                <option value="MSI">
+                    MSI
+                </option>
+                <option value="Microsoft">
+                    Microsoft
+                </option>
+                <option value="Toshiba">
+                    Toshiba
+                </option>
+                <option value="Huawei">
+                    Huawei
+                </option>
+                <option value="Xiaomi">
+                    Xiaomi
+                </option>
+                <option value="Vero">
+                    Vero
+                </option>
+                <option value="Razer">
+                    Razer
+                </option>
+                <option value="Mediacom">
+                    Mediacom
+                </option>
+                <option value="Samsung">
+                    Samsung
+                </option>
+                <option value="Google">
+                    Google
+                </option>
+                <option value="Fujitsu">
+                    Fujitsu
+                </option>
+                <option value="LG">
+                    LG
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Laptop Type</label>
+            <select class="form-control" name="TypeName" placeholder="Enter Laptop Type" required>
+                <option class="placeholder" selected disabled value="">Select Type</option>
+                <option value="Ultrabook">
+                    Ultrabook
+                </option>
+                <option value="Notebook">
+                    Notebook
+                </option>
+                <option value="2 in 1 Convertible">
+                    2 in 1 Convertible
+                </option>
+                <option value="Netbook">
+                    Netbook
+                </option>
+                <option value="Gaming">
+                    Gaming
+                </option>
+                <option value="Workstation">
+                    Workstation
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ram(GB)</label>
+            <input class="form-control" type="number" name="Ram(GB)"
+                placeholder="Enter The Amount of Ram" min='2' max='64' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Weight(Kg)</label>
+            <input class="form-control" type="number" name="Weight(Kg)"
+                placeholder="Enter The Amount of Weight" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Touch Screen</label>
+            <select class="form-control" name="parental_level_of_education"
+                placeholder="Want Touch Screen?" required>
+                <option value=1>
+                   Yes
+                </option>
+                <option value=0>
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">IPS Screen</label>
+            <select class="form-control" name="IPS" placeholder="Want IPS screen?" required>
+                <option value=1>
+                    Yes
+                 </option>
+                 <option value=0>
+                     No
+                 </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Screen Resolution</label>
+            <select class="form-control" name="Screen Resolution" placeholder="Provide Screen Resolution" required>
+                <option value='2560x1600'>
+                    2560x1600
+                 </option>
+                 <option value='1440x900'>
+                    1440x900
+                 </option>
+                 <option value='1920x1080'>
+                    1920x1080
+                 </option>
+                 <option value='2880x1800'>
+                    2880x1800
+                 </option>
+                 <option value='3200x1800'>
+                    3200x1800
+                 </option>
+                 <option value='1920x1200'>
+                    1920x1200
+                 </option>
+                 <option value='2256x1504'>
+                    2256x1504
+                 </option>
+                 <option value='3200x1800'>
+                    3200x1800
+                 </option>
+                 <option value='1366x768'>
+                    1366x768
+                 </option>
+                 <option value='3840x2160'>
+                    3840x2160
+                 </option>
+                 <option value='2160x1440'>
+                    2160x1440
+                 </option>
+                 <option value='2560x1440'>
+                    2560x1440
+                 </option><option value='1600x900'>
+                    1600x900
+                 </option>
+                 <option value='1366x768'>
+                    1366x768
+                 </option>
+                 <option value='2736x1824'>
+                    2736x1824
+                 </option>
+                 <option value='2400x1600'>
+                    2400x1600
+                 </option>
+                 <option value='2400x1600'>
+                    2400x1600
+                 </option>
+                 <option value='2400x1600'>
+                    2400x1600
+                 </option>
+                 <option value='2400x1600'>
+                    2400x1600
+                 </option>
+                 <option value='2400x1600'>
+                    2400x1600
+                 </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Test preparation Course</label>
+            <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
+                required>
+                <option class="placeholder" selected disabled value="">Select Test_course</option>
+                <option value="none">
+                    None
+                </option>
+                <option value="completed">
+                    Completed
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Writing Score out of 100</label>
+            <input class="form-control" type="number" name="reading_score"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Reading Score out of 100</label>
+            <input class="form-control" type="number" name="writing_score"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
