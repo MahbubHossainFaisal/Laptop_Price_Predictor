@@ -32,7 +32,8 @@ class CustomData:
                 Weight:float,
                 Touchscreen:bool,
                 IPS:bool,
-                PPI:float,
+                Screen_Resolution:str,
+                size:float,
                 Cpu_Brand:str,
                 HDD:int,
                 SSD:int,
@@ -53,8 +54,8 @@ class CustomData:
         self.Touchscreen = Touchscreen
 
         self.IPS = IPS
-
-        self.PPI = PPI
+         	                
+        self.PPI = ((int(Screen_Resolution.split('x')[0]))**2 + (int(Screen_Resolution.split('x')[1]))**2)**.5 / float(size)
 
         self.Cpu_Brand = Cpu_Brand
 
@@ -77,16 +78,16 @@ class CustomData:
             custom_data_input_dict = {
                 "Company": [self.Company],
                 "TypeName": [self.TypeName],
-                "Ram": [self.Ram],
-                "Weight": [self.Weight],
+                "Ram(GB)": [self.Ram],
+                "Weight(kg)": [self.Weight],
                 "Touchscreen": [self.Touchscreen],
                 "IPS": [self.IPS],
                 "PPI": [self.PPI],
                 "Cpu_Brand": [self.Cpu_Brand],
-                "HDD": [self.HDD],
-                "SSD": [self.SSD],
-                "Hybrid": [self.Hybrid],
-                "Flash_Storage": [self.Flash_Storage],
+                "HDD(GB)": [self.HDD],
+                "SSD(GB)": [self.SSD],
+                "Hybrid(GB)": [self.Hybrid],
+                "Flash_Storage(GB)": [self.Flash_Storage],
                 "Gpu_Brand": [self.Gpu_Brand],
                 "Os": [self.Os]
 

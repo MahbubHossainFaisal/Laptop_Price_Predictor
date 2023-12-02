@@ -21,13 +21,21 @@ def predictdatapoint():
         return render_template('home.html')
     else:
         data=CustomData(
-            gender=request.form.get('gender'),
-            race_ethnicity=request.form.get('ethnicity'),
-            parental_level_of_education=request.form.get('parental_level_of_education'),
-            lunch=request.form.get('lunch'),
-            test_preparation_course=request.form.get('test_preparation_course'),
-            reading_score=float(request.form.get('writing_score')),
-            writing_score=float(request.form.get('reading_score'))
+            Company = request.form.get('Company'),
+            TypeName = request.form.get('TypeName'),
+            Ram=request.form.get('Ram'),
+            Weight=float(request.form.get('Weight')),
+            Touchscreen=request.form.get('Touchscreen'),
+            IPS=request.form.get('IPS'),
+            Screen_Resolution=request.form.get('Screen_Resolution'),
+            size=float(request.form.get('size')),
+            Cpu_Brand=request.form.get('Cpu_Brand'),
+            HDD=int(request.form.get('HDD')),
+            SSD=int(request.form.get('SSD')),
+            Hybrid=int(request.form.get('Hybrid')),
+            Flash_Storage=int(request.form.get('Flash_Storage')),
+            Gpu_Brand=request.form.get('Gpu_Brand'),
+            Os=request.form.get('Os')
 
         )
         pred_df=data.get_data_as_data_frame()
@@ -38,7 +46,7 @@ def predictdatapoint():
         print("Mid Prediction")
         results=predict_pipeline.predict(pred_df)
         print("after Prediction")
-        return render_template('home.html',results=results[0])
+        return render_template('home.html',results=int(np.exp(results[0])))
     
 
 

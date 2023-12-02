@@ -70,7 +70,7 @@ class DataTransformation:
             preprocessing_obj = self.get_data_transformer_object()
 
             target_column = 'Price_BDT'
-            input_feature_train_df = train_df.drop(Columns=[target_column],axis=1)
+            input_feature_train_df = train_df.drop(columns=[target_column],axis=1)
             target_feature_train_df = train_df[target_column]
 
             input_feature_test_df = test_df.drop(columns=[target_column],axis=1)
