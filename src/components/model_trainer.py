@@ -96,7 +96,7 @@ class ModelTrainer:
             ]
 
             best_model = models[best_model_name]
-
+            print(best_model)
             if best_model_score < 0.6:
                 raise CustomException("No best model found!!!")
             
